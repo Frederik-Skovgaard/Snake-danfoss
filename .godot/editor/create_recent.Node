@@ -1,0 +1,14 @@
+Label
+Node
+ColorRect
+VisibleOnScreenNotifier2D
+Timer
+Button
+CanvasLayer
+Node2D
+AnimationPlayer
+RayCast2D
+CollisionShape2D
+Sprite2D
+AnimatedSprite2D
+Area2D

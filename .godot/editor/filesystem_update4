@@ -1,0 +1,4 @@
+res://World/hud.tscn
+res://World/main.tscn
+res://Scripts/HUD.gd
+res://Scripts/main.gd
