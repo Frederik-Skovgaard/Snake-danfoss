@@ -69,7 +69,8 @@ func grow() -> void:
 	await get_tree().create_timer(speed + 0.1).timeout
 	bodyparts.push_back(bodypart)
 	
-	speed -= 0.02
+	if speed > -0.20:
+		speed -= 0.02
 	_tween_loop()
 
 

@@ -1,3 +1,4 @@
 res://World/main.tscn
+res://Scripts/main.gd
 res://World/hud.tscn
-res://Scripts/HUD.gd
+res://Scripts/snake.gd

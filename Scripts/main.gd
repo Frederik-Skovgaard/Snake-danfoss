@@ -4,6 +4,8 @@ var score
 var head
 
 func new_game():
+	$AnimationPlayer.play("fade_in")
+	$AudioStreamPlayer.play()
 	score = 0
 	$HUD.update_score("Score: " + str(score))
 	$HUD.show_message("Get Ready")
@@ -11,6 +13,7 @@ func new_game():
 	$snake._tween_loop()
 
 func game_over():
+	$AnimationPlayer.play("fade_out")
 	$HUD.show_game_over()
 	get_tree().paused = true
 	await get_tree().create_timer(3).timeout
@@ -41,3 +44,8 @@ func _process(delta):
 		head = $snake.bodyparts[0].get_rect()
 		if $snake.snake_out_of_border():
 			game_over()
+
+
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "fade_out":
+		$AudioStreamPlayer.stop()
